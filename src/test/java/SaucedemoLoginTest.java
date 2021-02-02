@@ -16,7 +16,7 @@ public class SaucedemoLoginTest {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         WebDriver browser = new ChromeDriver();
         browser.manage().window().maximize();
-        browser.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+        browser.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         browser.get("https://www.saucedemo.com/");
         WebElement username = browser.findElements(By.tagName("input")).get(0);
